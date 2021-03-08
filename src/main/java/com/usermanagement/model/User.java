@@ -1,9 +1,6 @@
 package com.usermanagement.model;
 
 import java.util.Date;
-
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.Generated;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;

@@ -1,16 +1,13 @@
 package com.usermanagement.repository;
 
-import com.usermanagement.exception.TokenNotFoundException;
-import com.usermanagement.exception.UserNotFoundException;
+import com.usermanagement.exception.*;
 import com.usermanagement.model.User;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;
 import java.util.List;
 
@@ -96,6 +93,7 @@ public class UserRepositoryImp implements UserRepository {
             return null;
         else if (results.size() == 1)
             return results.get(0);
+
         throw new UserNotFoundException("no user found");
 
     }
